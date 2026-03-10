@@ -1,0 +1,341 @@
+/* =========================================
+   STYLE CSS - ENTENTE CYCLISTE PAYS DE RENNES (ECPR)
+   Couleurs principales : Rouge (#a90005) et Noir/Gris Foncé (#1a1a1a)
+   ========================================= */
+
+/* === SLOGAN & ANIMATIONS === */
+#slogan {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#slogan.show {
+  opacity: 1;
+}
+
+#carouselText {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#carouselText.fade-out {
+  opacity: 0;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* === HERO BANNER (Accueil) === */
+.hero-banner {
+  background: url("logos/logo_ecpr.webp") center/cover no-repeat;
+  background-color: #1a1a1a; /* Fond noir par défaut si l'image ne charge pas */
+  height: 55vh;
+  position: relative;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Assombri un peu plus pour faire ressortir le texte blanc */
+  z-index: 1;
+}
+
+.hero-banner > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-banner h1,
+.hero-banner h2,
+.hero-banner div,
+.hero-banner p {
+  color: white !important;
+}
+
+/* === NAVBAR === */
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #a90005; /* Soulignement rouge ECPR pour la page active */
+  color: #fff !important;
+}
+
+/* Menu secondaire (si utilisé plus tard) */
+.navbarSection {
+  background-color: #1a1a1a; /* Remplacement du bleu par du gris très foncé */
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 5px 20px;
+}
+
+/* === BOUTONS === */
+.btn-lg {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-lg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Remplacement du bouton primaire (anciennement bleu) par du Noir/Gris foncé */
+.btn-primary {
+  background-color: #1a1a1a;
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+  color: white;
+}
+
+/* Bouton rouge ECPR */
+.btn-danger {
+  background-color: #a90005 !important;
+  border-color: #a90005 !important;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c !important; /* Rouge plus foncé au survol */
+  border-color: #b71c1c !important;
+}
+
+/* Bouton spécifique pour les partenaires */
+.btn-partner {
+  margin-top: 40px;
+  background-color: #a90005; /* Rouge ECPR */
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-partner:hover {
+  background-color: #b71c1c; /* Rouge foncé */
+  color: #fff;
+}
+
+/* === CARTES (Sections, Sponsors, etc.) === */
+.card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #1a1a1a; /* Texte des titres en sombre */
+}
+
+/* === ALBUM PHOTO === */
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.album-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.album-item p {
+  margin: 5px 0 0 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.album-item.small { width: 250px; }
+.album-item.medium { width: 400px; }
+.album-item.large { width: 550px; }
+
+/* === SECTION SUIVI / SOCIAL === */
+.social-btn {
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+.social-grid img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* === STRUCTURE & CONTAINERS === */
+.container-limitee {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === CARROUSEL === */
+.carousel-item img {
+  height: 650px;
+  object-fit: contain;
+  width: 100%;
+  display: block;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+/* === LIGHTBOX / MODAL IMAGES === */
+.modal-img {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.modal-img-content {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 8px;
+  display: block;
+}
+
+.modal-img-close,
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.modal-img-close {
+  top: 20px;
+  right: 35px;
+  font-size: 45px;
+}
+
+.modal-prev {
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.modal-next {
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-img-close:hover {
+  color: #a90005; /* Rouge au survol au lieu du gris */
+}
+
+.modal-caption {
+  margin-top: 15px;
+  color: #f1f1f1;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* === DOSSIERS ALBUMS (breadcrumb & icônes) === */
+.folder-icon-container {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-icon-container:hover {
+  background-color: #f8f9fa;
+  border-color: #a90005; /* Bordure rouge ECPR au survol */
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.2); /* Ombre rouge légère */
+}
+
+.folder-icon-container i {
+  font-size: 4rem;
+  color: #1a1a1a; /* Icône de dossier noire */
+  margin-bottom: 10px;
+}
+
+.folder-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.breadcrumb-item a {
+  color: #a90005; /* Liens du fil d'ariane en rouge ECPR */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+  color: #1a1a1a; /* Devient noir au survol */
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
