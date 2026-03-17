@@ -26,6 +26,16 @@
       padding: 120px 0;
     }
     .slogan-text { min-height: 40px; }
+    
+    /* L'EFFET DE ZOOM EXACT DE L'US VERN */
+    .visibilite-img {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .visibilite-img:hover {
+      transform: scale(1.03); /* Léger zoom comme sur l'US Vern */
+    }
   </style>
 </head>
 <body>
@@ -82,7 +92,7 @@
         <a href="clubs.html" class="btn btn-dark mt-3 px-4">Voir les 7 clubs fondateurs</a>
       </div>
       <div class="col-md-6 text-center">
-        <img src="images/maillot_ecpr.webp" alt="Nouveau maillot cycliste ECPR 2026" class="img-fluid rounded shadow-lg" style="max-height: 450px;">
+        <img src="images/maillot_ecpr.webp" alt="Nouveau maillot cycliste ECPR 2026" class="img-fluid visibilite-img" style="max-height: 450px;">
       </div>
     </div>
 
@@ -93,7 +103,6 @@
         <img src="images/photo_equipe.webp" alt="Tous les coureurs de l'ECPR" class="img-fluid rounded shadow-lg" style="width: 100%; max-height: 600px; object-fit: cover; object-position: center top;">
         
         <p class="mt-2 text-muted" style="font-size: 0.9rem;">
-          
           <a href="https://victorraultd0fb.myportfolio.com/" target="_blank" class="text-decoration-none fw-bold" style="color: #a90005;">
             Merci à Victor Rault pour la photo
           </a>
