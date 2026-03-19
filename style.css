@@ -339,3 +339,7 @@
 .breadcrumb-item.active {
   color: #6c757d;
 }
+
+.visibilite-img:hover {
+  transform: scale(1.03); /* Un zoom très léger, pas 1.05 comme j'avais mis */
+}
