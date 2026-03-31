@@ -30,7 +30,7 @@
 
 /* === HERO BANNER (Accueil) === */
 .hero-banner {
-  background: url("logos/logo_ecpr.webp") center/cover no-repeat;
+  background: url("logos/logo_ecpr.png") center/cover no-repeat;
   background-color: #1a1a1a; /* Fond noir par défaut si l'image ne charge pas */
   height: 55vh;
   position: relative;
