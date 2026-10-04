@@ -50,6 +50,7 @@
           <li class="nav-item"><a class="nav-link" href="projet">Le Projet U17/U19</a></li>
           <li class="nav-item"><a class="nav-link" href="clubs">Les Clubs Partenaires</a></li>
           <li class="nav-item"><a class="nav-link" href="nospartenaires">Nos Sponsors</a></li>
+<li class="nav-item"><a class="nav-link" href="boutique.html">Boutique</a></li>
           <li class="nav-item"><a class="nav-link active" href="noussuivre">Nous Suivre</a></li>
           <li class="nav-item"><a class="nav-link" href="nouscontacter">Nous Contacter</a></li>
           <li class="nav-item"><a class="nav-link" href="presse">Presse</a></li>
@@ -86,28 +87,36 @@
     
     <div class="row justify-content-center">
       <div class="col-12">
-        <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+        <div class="row justify-content-center">
+          <div class="col-12 text-center" id="instagram-container">
+    <div id="cookie-placeholder" class="p-5 bg-light border rounded">
+      <i class="fab fa-instagram fa-3x mb-3 text-muted"></i>
+      <h5 class="fw-bold">Contenu externe bloqué</h5>
+      <p class="text-muted">L'affichage de notre fil Instagram nécessite l'acceptation des cookies liés aux réseaux sociaux (Curator.io).</p>
+      <button class="btn btn-danger" onclick="acceptCookies()">Autoriser l'affichage</button>
+    </div>
+    <!-- Le feed apparaîtra ici après consentement -->
+    <div id="curator-feed-default-feed-layout" style="display:none;"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+  </div>
+</div>
       </div>
     </div>
     </section>
 
   <footer class="bg-dark text-white text-center p-4 mt-auto border-top border-danger border-3">
-    <p>&copy; 2026 Entente Cycliste du Pays de Rennes (ECPR) - Tous droits réservés | <a href="mentionslegales" class="text-white-50 text-decoration-none" style="transition: 0.3s;">Mentions Légales</a></p>
-    <p class="fs-4 mb-0">
-      <a href="https://www.instagram.com/ecpaysderennes" target="_blank" class="text-white mx-2 text-decoration-none"><img src="logos/logoinsta.webp" alt="Instagram ECPR" style="height:25px;"></a>
-      <a href="https://www.facebook.com/profile.php?id=61585619027082" target="_blank" class="text-white mx-2 text-decoration-none"><img src="logos/logofa.webp" alt="Facebook ECPR" style="height:25px;"></a>
-    </p>
-  </footer>
+  <div class="mb-3">
+    <a href="mentionslegales.html" class="text-white-50 text-decoration-none mx-2">Mentions Légales</a> | 
+    <a href="confidentialite.html" class="text-white-50 text-decoration-none mx-2">Politique de Confidentialité</a>
+  </div>
+  <p>&copy; 2026 Entente Cycliste du Pays de Rennes (ECPR) - Tous droits réservés.</p>
+  <p class="fs-4 mb-0">
+    <a href="https://www.instagram.com/ecpaysderennes" target="_blank" class="text-white mx-2 text-decoration-none" aria-label="Instagram ECPR"><img src="logos/logoinsta.webp" alt="" style="height:25px;"></a>
+    <a href="https://www.facebook.com/profile.php?id=61585619027082" target="_blank" class="text-white mx-2 text-decoration-none" aria-label="Facebook ECPR"><img src="logos/logofa.webp" alt="" style="height:25px;"></a>
+  </p>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   
-  <script type="text/javascript">
-    /* curator-feed-default-feed-layout */
-    (function(){
-    var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
-    i.src="https://cdn.curator.io/published/5b4849e5-1f13-4773-905b-ad3918e71820.js";
-    e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-    })();
-  </script>
+  <script src="cookie-banner.js"></script>
 </body>
 </html>
